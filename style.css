@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Unica+One&display=swap');
 
 /*color pallete:
 Black 000000
@@ -15,31 +15,44 @@ White FFFFFF
 
 body {
 	color: #3E3636;
-  font-family: sans-serif;
-  margin: 0px;
-  padding: 0px;
+  	font-family: 'Roboto Mono', monospace;
+  	margin: 0px;
+  	padding: 0px;
 }
 
 
 html {
-  margin: 0px;
-  padding: 0px;
+  	margin: 0px;
+  	padding: 0px;
+}
+
+#site {
+	display:grid;
+	grid:"header header header header header"
+	". main main main right"
+	". footnote footnote footnote .";
+}
+
+#header{
+	grid-area: header;
 }
 
 .navMenu {
 	display:flex;
 	justify-content:center;
 	background-color: #F5EDED;
-	height: 32.9%;
+	/*height: 32.9%;*/
 }
 
 .nav{
-	font-family: 'Unica One', cursive;
+	/*font-family: 'Unica One', cursive;*/
 	text-decoration: none;
 	display:flex;
 	color:#3E3636;
 	padding:5px;
 	width:25%;
+	padding-top: .5vh;
+	padding-bottom: .5vh;
 	justify-content:space-around;
 	background-color: #F5EDED;
 	text-align:center;
@@ -56,7 +69,8 @@ html {
 /*	width:100%;*/
 	height:27.78vw;
 	background-image: url("img/basic/starterBG.jpg");
- 	background-size: 100%;
+	background-size: cover;
+	background-position:right-top;
 }
 
 .title{
@@ -65,8 +79,27 @@ html {
 	text-align: left;
 	font-size: 70px;
 	padding-top: 70px;
-	width:90%;
 	bottom:0%;
 	left:11%;
 	font-family: 'Unica One', cursive;
+}
+
+#main{
+	grid-area:main;
+}
+
+#rightInfo{
+	grid-area:right;
+}
+
+#profilePic{
+	width: 100px;
+}
+
+.show{
+
+}
+
+.pixelShow{
+	image-rendering: pixelated;
 }
