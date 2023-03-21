@@ -15,6 +15,7 @@ White FFFFFF
 
 body {
 	color: #3E3636;
+	font-size: 18px;
   	font-family: 'Roboto Mono', monospace;
   	margin: 0px;
   	padding: 0px;
@@ -28,9 +29,10 @@ html {
 
 #site {
 	display:grid;
-	grid:"header header header header header"
-	". main main main right"
-	". footnote footnote footnote .";
+	grid-template-areas:"header header header header header"
+	"main main main main right"
+	"footnote footnote footnote footnote footnote";
+	grid-gap:20px;
 }
 
 #header{
@@ -89,11 +91,53 @@ html {
 }
 
 #rightInfo{
+	width:23vw;
 	grid-area:right;
+	display:grid;
+	grid:". profile ."
+	"title title title"
+	"main main main";
+}
+
+#profilePicContainer{
+	display:flex;
+	justify-content:center;
+	grid-area:profile;
 }
 
 #profilePic{
 	width: 100px;
+	height: 100px;
+}
+
+#profileTitle{
+	grid-area:title;
+	font-family: 'Unica One', cursive;
+	text-align: center;
+	font-size: 1.5rem;
+	margin-top: 5px;
+	margin-bottom:5px;
+}
+
+#profileText{
+	grid-area:main;
+	margin:0px;
+	padding:10px;
+	padding-left: 15px;
+}
+
+#footnote{
+	grid-area:footnote;
+	font-size: 0.8rem;
+	background-color: #3E3636;
+	color: #F5EDED;
+}
+
+#footnote p{
+	padding-left: 15%;
+	padding-right: 15%;
+	padding-bottom: 1vh;
+	text-align: center;
 }
 
 .show{
