@@ -14,11 +14,14 @@ White FFFFFF
 }
 
 body {
-	color: #3E3636;
+	color: #F5EDED;
 	font-size: 18px;
   	font-family: 'Roboto Mono', monospace;
   	margin: 0px;
   	padding: 0px;
+  	background-repeat: repeat-y;
+	background-image: url("img/basic/mainBGver3.jpg");
+	background-size: cover;
 }
 
 
@@ -29,14 +32,22 @@ html {
 
 #site {
 	display:grid;
-	grid-template-areas:"header header header header header"
-	"main main main main right"
-	"footnote footnote footnote footnote footnote";
+	grid-template-areas:"header header header header header header header"
+	". main main main main right ."
+	". main main main main . ."
+	"footnote footnote footnote footnote footnote footnote footnote";
 	grid-gap:20px;
 }
 
 #header{
 	grid-area: header;
+}
+
+#main{
+	/*background-repeat: repeat-y;
+	background-image: url("img/basic/mainBG.jpg");
+	background-size: cover;*/
+	grid-area:main;
 }
 
 .navMenu {
@@ -72,22 +83,17 @@ html {
 	height:27.78vw;
 	background-image: url("img/basic/starterBG.jpg");
 	background-size: cover;
-	background-position:right-top;
 }
 
 .title{
 	position:absolute;
-	color:#D72323;
+	color:#FFFFFF;
 	text-align: left;
 	font-size: 70px;
 	padding-top: 70px;
 	bottom:0%;
 	left:11%;
 	font-family: 'Unica One', cursive;
-}
-
-#main{
-	grid-area:main;
 }
 
 #rightInfo{
@@ -97,6 +103,7 @@ html {
 	grid:". profile ."
 	"title title title"
 	"main main main";
+	background-color: #3E3636;
 }
 
 #profilePicContainer{
@@ -140,8 +147,125 @@ html {
 	text-align: center;
 }
 
-.show{
+#selectedWorkSection{
+	display:flex;
+	justify-content:center;
+}
 
+#selectedGrid{
+	display:grid;
+	grid-gap:0px;
+	grid:". title title"
+	"drawn others photo"
+	"drawn others game"
+	". title2 title2"
+	"review review review";
+}
+
+/*.homeTitle{
+	position:absolute;
+	color: white;
+	font-size: 36px;
+	text-align: right;	
+	padding:10px;
+	background-color: #F5EDED;
+}
+*/
+.selectedShow{
+	width:18vw;
+	background-size: cover;
+	color:transparent;
+	text-decoration: none;
+}
+
+.selectedWorkTitle{
+	font-size: 2rem;
+	grid-area:title;
+	text-align: right;
+	background-color: #D72323;
+	font-family: 'Unica One', cursive;
+}
+
+.selectedWorkTitle2{
+	font-size: 2rem;
+	grid-area:title2;
+	text-align: right;
+	background-color: #D72323;
+	font-family: 'Unica One', cursive;
+}
+
+#drawing{
+	grid-area:drawn;
+	background-image: url("img/gallery/selectedWork/drawingShow.jpg");
+	height:36vw;
+}
+
+#drawing:hover{
+	background-image: url("img/gallery/selectedWork/redCover.jpg");
+}
+
+#others{
+	grid-area:others;
+	height:36vw;
+	background-image: url("img/gallery/selectedWork/installationShow.jpg");
+}
+
+#others:hover{
+	background-image: url("img/gallery/selectedWork/redCover.jpg");
+}
+
+#photo{
+	grid-area:photo;
+	height:18vw;
+	background-image: url("img/gallery/selectedWork/photoShow.jpg");
+}
+
+#photo:hover{
+	background-image: url("img/gallery/selectedWork/redCover.jpg");
+}
+
+#game{
+	grid-area:game;
+	height:18vw;
+	background-image: url("img/gallery/selectedWork/gameShow.jpg");
+}
+
+#game:hover{
+	background-image: url("img/gallery/selectedWork/redCover.jpg");
+}
+
+#review{
+	grid-area:review;
+	width:54vw;
+	height: 36vw;
+	background-image: url("img/gallery/selectedWork/latestReview.jpg");
+}
+
+#review:hover{
+	background-image: url("img/gallery/selectedWork/redCover.jpg");
+}
+
+.selectedShow:hover{
+	color:#FFFFFF;
+}
+
+.selectedTitle {
+	font-family: 'Unica One', cursive;
+	font-size: 1.5rem;
+	padding:20px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+#review .selectedTitle {
+	padding-top: 30%;
+	font-size: 3rem;
+}
+
+.selectedText {
+	padding:20px;
+	padding-top: 5px;
+	margin-top: 0px;
 }
 
 .pixelShow{
