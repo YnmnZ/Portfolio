@@ -6,10 +6,12 @@ Grey-Brown 3E3636
 Red D72323
 Light Red F5EDED
 White FFFFFF
+
+color palette from 
+https://colorhunt.co/palette/0000003e3636d72323f5eded
 */
 
 * {
-  /* border: 1px solid black; */
   box-sizing: border-box;
 }
 
@@ -32,7 +34,7 @@ html {
 
 #site {
 	display:grid;
-	grid-template-areas:"header header header header header header header"
+	grid:"header header header header header header header"
 	". main main main main right ."
 	". main main main main . ."
 	"update update update update update update update"
@@ -40,14 +42,45 @@ html {
 	grid-gap:20px;
 }
 
+#gallery{
+	display:grid;
+	grid:"header header header header header header header"
+	"update update update update update update update"
+	"footnote footnote footnote footnote footnote footnote footnote";
+	grid-gap:0px;
+}
+
+#gArticle{
+	display:grid;
+	grid:"header header header header header"
+	"showcase showcase showcase showcase showcase"
+	"info text text text text"
+	"footnote footnote footnote footnote footnote";
+	grid-gap:0px;
+}
+
+#rArticle{
+	display:grid;
+	grid:"header header header header header"
+	"showcase showcase showcase showcase showcase"
+	"text text text text text"
+	"footnote footnote footnote footnote footnote";
+	grid-gap:0px;
+}
+
+#contactSite{
+	display:grid;
+	grid:"header"
+	"main"
+	"footnote";
+	grid-gap:0px;
+}
+
 #header{
 	grid-area: header;
 }
 
 #main{
-	/*background-repeat: repeat-y;
-	background-image: url("img/basic/mainBG.jpg");
-	background-size: cover;*/
 	grid-area:main;
 }
 
@@ -55,13 +88,12 @@ html {
 	display:flex;
 	justify-content:center;
 	background-color: #F5EDED;
-	/*height: 32.9%;*/
+	border-style: none none solid none;
+	border-color: #000000;
 }
 
 .nav{
-	/*font-family: 'Unica One', cursive;*/
 	text-decoration: none;
-	display:flex;
 	color:#3E3636;
 	padding:5px;
 	width:25%;
@@ -80,13 +112,13 @@ html {
 
 .starter{
 	position:relative;
-/*	width:100%;*/
 	height:27.78vw;
 	background-image: url("img/basic/starterBG.jpg");
 	background-size: cover;
 }
 
 .title{
+	width:50%;
 	position:absolute;
 	color:#FFFFFF;
 	text-align: left;
@@ -95,6 +127,10 @@ html {
 	bottom:0%;
 	left:11%;
 	font-family: 'Unica One', cursive;
+}
+
+#long{
+	font-size: 50px;
 }
 
 #rightInfo{
@@ -138,14 +174,20 @@ html {
 	padding-bottom:3vh; 
 }
 
-#footnote{
+#homeF{
+	margin-top: -20px;
+}
+
+.footnote{
+	margin:0px;
+	padding:0px;
 	grid-area:footnote;
 	font-size: 0.8rem;
 	background-color: #3E3636;
 	color: #F5EDED;
 }
 
-#footnote p{
+.footnote p{
 	padding-left: 15%;
 	padding-right: 15%;
 	padding-bottom: 1vh;
@@ -167,15 +209,6 @@ html {
 	"review review review";
 }
 
-/*.homeTitle{
-	position:absolute;
-	color: white;
-	font-size: 36px;
-	text-align: right;	
-	padding:10px;
-	background-color: #F5EDED;
-}
-*/
 .selectedShow{
 	width:18vw;
 	background-size: cover;
@@ -303,6 +336,7 @@ html {
 }
 
 .updateArticle a{
+	width: 40vw;
 	text-decoration: none;
 	color: #000000;
 	padding-top: 3vh;
@@ -312,14 +346,16 @@ html {
 }
 
 .updateArticle a:hover{
-	color: #757882;
+	color: #D72323;
 }
 
 .updateAbstract{
+	width: 40vw;
 	grid-area:abs;
 }
 
 .updateDate{
+	width: 40vw;
 	color: #3E3636;
 	font-size: 1rem;
 }
@@ -328,11 +364,174 @@ html {
 	padding-top:10px;
 	padding-bottom:10px;
 	grid-area:pic;
-	width:20%;
+	width:40%;
+	justify-self:center;
 /*	position:relative;
 	right:0px;*/
 }
 
 #firstUpdate{
 	border-style: groove none;
+}
+
+#showcaseContainer{
+	padding: 20px;
+	grid-area:showcase;
+	display:flex;
+	justify-content:center;
+	background-color: #F5EDED;
+	border-bottom: solid;
+	border-color: #000000;
+	border-width:1vh;
+}
+
+.showcaseBlock{
+	width: 40%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-direction:column;
+}
+
+.showcaseImg{
+	width: 40%;
+}
+
+.showcaseDes{
+	/*width: 40vw;*/
+	color: #3E3636;
+	font-size: 1rem;
+	text-align: center;
+}
+
+#workInfo{
+	font-family: 'Unica One', cursive;
+	width: 30vw;
+	grid-area:info;
+	margin: 0px;
+	height:100%;
+	padding-right: 10px;
+	padding-top: 100px;
+	color: #F5EDED;
+	font-size: 1.5rem;
+	text-align: right;
+	background-color: #D72323;
+	border-right: double;
+	/*border-top: groove;*/
+	line-height: 5vh;
+	border-color: #F5EDED;
+	border-width: 0.5vw;
+	display:flex;
+	flex-direction:column;
+	align-items: flex-end;
+}
+
+#textContainer{
+	grid-area:text;
+	color: #3E3636;
+	margin: 0px;
+	text-indent: 3vw;
+	padding: 15px;
+	padding-left:1.5vw;
+	border-left:solid;
+	border-color:#D72323;
+	border-width:1vw;
+	background-color: #F5EDED;
+}
+
+#rArticle #textContainer {
+	border:none;
+}
+
+.textPara{
+
+}
+
+#big{
+	width:75%;
+}
+
+.pixel{
+	image-rendering:pixelated;
+}
+
+.transparent{
+	background-color: white;
+}
+
+#workInfo a {
+	margin:5px;
+	width:50%;
+	padding: 10px;
+	background-color: black;
+	color:white;
+	text-align: center;
+}
+
+#workInfo a:hover{
+	background-color: white;
+	color:black;
+}
+
+.reviewText{
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+#contactContainer{
+	display:flex;
+	flex-direction:column;
+	grid-area:main;
+	align-items:center;
+	justify-content:center;
+	background-color: black;
+}
+
+.contactBlock{
+	display:grid;
+	grid:"title title"
+	"text image";
+}
+
+.contactBlock h1{
+	padding-top:3vh;
+	padding-bottom:3vh;
+	text-align: center;
+	font-family: 'Unica One', cursive;
+	background-color: #D72323;
+	grid-area:title;
+}
+
+.contactTextContainer a {
+	font-family: 'Unica One', cursive;
+	text-decoration: none;
+	position:relative;
+	margin:5vh;
+	padding: 20px;
+	right:0px;
+	background-color: #3E3636;
+	color:#D72323;
+	/*justify-self:right;*/
+}
+
+.contactTextContainer a:hover{
+	color: #3E3636;
+	background-color:#D72323;
+}
+
+.contactTextContainer {
+	grid-area:text;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+
+.contactTextContainer p {
+	width:80%;
+}
+
+.contactBlock img{
+	grid-area:image;
+	width:80%;
 }
