@@ -202,15 +202,15 @@ html {
 #selectedGrid{
 	display:grid;
 	grid-gap:0px;
-	grid:". title title"
-	"drawn others photo"
-	"drawn others game"
-	". title2 title2"
-	"review review review";
+	grid:"title title"
+	"others photo"
+	"drawn game"
+	"title2 title2"
+	"review review";
 }
 
 .selectedShow{
-	width:18vw;
+	width:27vw;
 	background-size: cover;
 	color:transparent;
 	text-decoration: none;
@@ -222,6 +222,7 @@ html {
 	text-align: right;
 	background-color: #D72323;
 	font-family: 'Unica One', cursive;
+	margin-left:25vw;
 }
 
 .selectedWorkTitle2{
@@ -230,12 +231,13 @@ html {
 	text-align: right;
 	background-color: #D72323;
 	font-family: 'Unica One', cursive;
+	margin-left:25vw;
 }
 
 #drawing{
 	grid-area:drawn;
 	background-image: url("img/gallery/selectedWork/drawingShow.jpg");
-	height:36vw;
+	height:27vw;
 }
 
 #drawing:hover{
@@ -244,7 +246,7 @@ html {
 
 #others{
 	grid-area:others;
-	height:36vw;
+	height:27vw;
 	background-image: url("img/gallery/selectedWork/installationShow.jpg");
 }
 
@@ -254,7 +256,7 @@ html {
 
 #photo{
 	grid-area:photo;
-	height:18vw;
+	height:27vw;
 	background-image: url("img/gallery/selectedWork/photoShow.jpg");
 }
 
@@ -264,7 +266,7 @@ html {
 
 #game{
 	grid-area:game;
-	height:18vw;
+	height:27vw;
 	background-image: url("img/gallery/selectedWork/gameShow.jpg");
 }
 
@@ -335,7 +337,7 @@ html {
 	"abs pic";
 }
 
-.updateArticle a{
+.updateT{
 	width: 40vw;
 	text-decoration: none;
 	color: #000000;
@@ -360,14 +362,21 @@ html {
 	font-size: 1rem;
 }
 
-.updateArticle img{
+.thumbnail{
 	padding-top:10px;
 	padding-bottom:10px;
 	grid-area:pic;
 	width:40%;
 	justify-self:center;
+	display:flex;
+	align-items:center;
+	justify-content:center;
 /*	position:relative;
 	right:0px;*/
+}
+
+.thumbnail img {
+	width:100%;
 }
 
 #firstUpdate{
