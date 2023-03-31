@@ -306,10 +306,11 @@ html {
 
 #gArticle{
 	display:grid;
-	grid:"header header header header header"
-	"showcase showcase showcase showcase showcase"
-	"info text text text text"
-	"footnote footnote footnote footnote footnote";
+	grid:"header"
+	"showcase"
+	"info"
+	"text"
+	"footnote";
 	grid-gap:0px;
 }
 
@@ -455,9 +456,6 @@ html {
 	display:flex;
 	justify-content:center;
 	background-color: #F5EDED;
-	border-bottom: solid;
-	border-color: #000000;
-	border-width:1vh;
 }
 
 .showcaseBlock{
@@ -480,26 +478,26 @@ html {
 }
 
 #workInfo{
-	font-family: 'Unica One', cursive;
-	width: 100%;
-	grid-area:info;
-	margin: 0px;
-	height:100%;
-	padding-right: 1vw;
-	padding-top: 3vh;
-	padding-left: 10vw;
-	color: #F5EDED;
-	font-size: 0.7rem;
-	text-align: right;
-	background-color: #D72323;
-	border-right: double;
-	/*border-top: groove;*/
-	line-height: 3vh;
-	border-color: #F5EDED;
-	border-width: 0.5vw;
-	display:flex;
-	flex-direction:column;
-	align-items: flex-end;
+    font-family: 'Unica One', cursive;
+    width: 100%;
+    grid-area: info;
+    margin: 0px;
+    height: 100%;
+    padding-right: 5vw;
+    /* padding-top: 3vh; */
+    padding-left: 10vw;
+    color: #F5EDED;
+    font-size: 1rem;
+    text-align: right;
+    background-color: #D72323;
+    /* border-right: double; */
+    /* border-top: groove; */
+    line-height: 3vh;
+    /* border-color: #F5EDED; */
+    /* border-width: 0.5vw; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 #textContainer{
@@ -508,10 +506,6 @@ html {
 	margin: 0px;
 	text-indent: 3vw;
 	padding: 15px;
-	padding-left:1.5vw;
-	border-left:solid;
-	border-color:#D72323;
-	border-width:1vw;
 	background-color: #F5EDED;
 }
 
