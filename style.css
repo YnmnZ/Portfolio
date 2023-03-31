@@ -28,7 +28,7 @@ html {
   	padding: 0px;
 }
 
-@media only screen and (min-width: 300px) {
+@media only screen and (min-width: 480px) {
   /* For tablets: */
   body{
   	font-size: 18px;
@@ -67,21 +67,21 @@ html {
 }
 
 #profilePic{
-	width: 200px;
-	height: 200px;
+	width: 130px;
+	height: 130px;
 }
 
 #profileTitle{
 	grid-area:title;
 	font-family: 'Unica One', cursive;
 	text-align: center;
-	font-size: 2rem;
+	font-size: 1.2rem;
 	margin-top: 20px;
 	margin-bottom:5px;
 }
 
 #profileText{
-	font-size: 1.3rem;
+	font-size: 1rem;
 	grid-area:main;
 	margin:0px;
 	padding:20px;
@@ -91,6 +91,7 @@ html {
 
 .title{
 	width:80%;
+	margin-bottom:5%;
 	position:absolute;
 	color:#FFFFFF;
 	text-align: left;
@@ -119,7 +120,8 @@ html {
 
 
 .selectedShow{
-	width:100%;
+	width:40vw;
+	height:40vw;
 	justify-self:right;
 	background-size: cover;
 	color:transparent;
@@ -179,8 +181,90 @@ html {
 }
 
 #review .selectedTitle {
-	padding-top: 30%;
-	font-size: 3rem;
+	/*padding-top: 30%;*/
+	font-size: 1.5rem;
+}
+
+.thumbnail{
+	padding-top:10px;
+	padding-bottom:10px;
+	grid-area:pic;
+	width:100%;
+	justify-self:center;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+/*	position:relative;
+	right:0px;*/
+}
+
+.nav{
+	text-decoration: none;
+	color:#3E3636;
+	padding:5px;
+	width:25%;
+	padding-top: .5vh;
+	padding-bottom: .5vh;
+	justify-content:space-around;
+	background-color: #F5EDED;
+	text-align:center;
+	font-size: 10px;
+}
+
+.nav:hover{
+	background-color: #3E3636;
+	color: #F5EDED;
+}
+
+.selectedTitle {
+	font-family: 'Unica One', cursive;
+	font-size: 1rem;
+	padding:10px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+.selectedText {
+	padding:10px;
+	padding-top: 5px;
+	margin-top: 0px;
+	font-size: 0.7rem;
+}
+
+
+#updateBox{
+	width: 84%;
+	padding: 20px;
+	padding-left: 10px;
+	padding-right:10px;
+}
+
+.updateAbstract{
+	width: 40vw;
+	grid-area:abs;
+	padding-right: 5%;
+	font-size: 1rem;
+}
+
+.updateDate{
+	width: 40vw;
+	color: #3E3636;
+	font-size: 0.8rem;
+}
+
+.reviewText{
+	padding-left: 10vw;
+	padding-right: 10vw;
+}
+
+.contactTextContainer p {
+	width:80%;
+}
+
+.contactBlock img{
+	grid-area: image;
+    width: 50vw;
+    padding-right: 10%;
 }
 
 }
@@ -330,6 +414,81 @@ html {
 	font-size: 3rem;
 }
 
+.thumbnail{
+	padding-top:10px;
+	padding-bottom:10px;
+	grid-area:pic;
+	width:40%;
+	justify-self:center;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+/*	position:relative;
+	right:0px;*/
+}
+
+.nav{
+	text-decoration: none;
+	color:#3E3636;
+	padding:5px;
+	width:25%;
+	padding-top: .5vh;
+	padding-bottom: .5vh;
+	justify-content:space-around;
+	background-color: #F5EDED;
+	text-align:center;
+	font-size: 20px;
+}
+
+.nav:hover{
+	background-color: #3E3636;
+	color: #F5EDED;
+}
+
+.selectedTitle {
+	font-family: 'Unica One', cursive;
+	font-size: 1.5rem;
+	padding:20px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+.selectedText {
+	padding:20px;
+	padding-top: 5px;
+	margin-top: 0px;
+}
+
+#updateBox{
+	width: 84%;
+	padding: 50px;
+}
+
+.updateAbstract{
+	width: 40vw;
+	grid-area:abs;
+}
+
+.updateDate{
+	width: 40vw;
+	color: #3E3636;
+	font-size: 1rem;
+}
+
+.reviewText{
+	padding-left: 20vw;
+	padding-right: 20vw;
+}
+
+.contactTextContainer p {
+	width:80%;
+}
+
+.contactBlock img{
+	grid-area:image;
+	width:80%;
+}
+
 }
 
 
@@ -396,24 +555,6 @@ html {
 	border-color: #000000;
 }
 
-.nav{
-	text-decoration: none;
-	color:#3E3636;
-	padding:5px;
-	width:25%;
-	padding-top: .5vh;
-	padding-bottom: .5vh;
-	justify-content:space-around;
-	background-color: #F5EDED;
-	text-align:center;
-	font-size: 20px;
-}
-
-.nav:hover{
-	background-color: #3E3636;
-	color: #F5EDED;
-}
-
 .starter{
 	position:relative;
 	height:27.78vw;
@@ -467,31 +608,12 @@ html {
 	color:#FFFFFF;
 }
 
-.selectedTitle {
-	font-family: 'Unica One', cursive;
-	font-size: 1.5rem;
-	padding:20px;
-	padding-bottom: 0px;
-	margin-bottom: 0px;
-}
-
-.selectedText {
-	padding:20px;
-	padding-top: 5px;
-	margin-top: 0px;
-}
-
 #updateContainer{
 	grid-area:update;
 	display:flex;
 	justify-content:center;
 	background-color: #F5EDED;
 	color:#3E3636;
-}
-
-#updateBox{
-	width: 84%;
-	padding: 50px;
 }
 
 #updateContainer h1{
@@ -522,30 +644,6 @@ html {
 
 .updateArticle a:hover{
 	color: #D72323;
-}
-
-.updateAbstract{
-	width: 40vw;
-	grid-area:abs;
-}
-
-.updateDate{
-	width: 40vw;
-	color: #3E3636;
-	font-size: 1rem;
-}
-
-.thumbnail{
-	padding-top:10px;
-	padding-bottom:10px;
-	grid-area:pic;
-	width:40%;
-	justify-self:center;
-	display:flex;
-	align-items:center;
-	justify-content:center;
-/*	position:relative;
-	right:0px;*/
 }
 
 .thumbnail img {
@@ -665,11 +763,6 @@ html {
 	color:black;
 }
 
-.reviewText{
-	padding-left: 20vw;
-	padding-right: 20vw;
-}
-
 #contactContainer{
 	display:flex;
 	flex-direction:column;
@@ -718,15 +811,6 @@ html {
 	flex-direction:column;
 	justify-content:center;
 	align-items:center;
-}
-
-.contactTextContainer p {
-	width:80%;
-}
-
-.contactBlock img{
-	grid-area:image;
-	width:80%;
 }
 
 #bigPText{
