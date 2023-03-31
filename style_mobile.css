@@ -1,0 +1,573 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Unica+One&display=swap');
+
+/*color pallete:
+Black 000000
+Grey-Brown 3E3636
+Red D72323
+Light Red F5EDED
+White FFFFFF
+
+color palette from 
+https://colorhunt.co/palette/0000003e3636d72323f5eded
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+	color: #F5EDED;
+	font-size: 18px;
+  	font-family: 'Roboto Mono', monospace;
+  	margin: 0px;
+  	padding: 0px;
+  	background-repeat: repeat-y;
+	background-image: url("img/basic/mainBGver3.jpg");
+	background-size: cover;
+}
+
+
+html {
+  	margin: 0px;
+  	padding: 0px;
+}
+
+#site {
+	display:grid;
+	grid:"header header header header header header header"
+	". main main main main right ."
+	". main main main main . ."
+	"update update update update update update update"
+	"footnote footnote footnote footnote footnote footnote footnote";
+	grid-gap:20px;
+}
+
+#gallery{
+	display:grid;
+	grid:"header header header header header header header"
+	"update update update update update update update"
+	"footnote footnote footnote footnote footnote footnote footnote";
+	grid-gap:0px;
+}
+
+#bigP{
+	display:grid;
+	grid:"header"
+	"text"
+	"update"
+	"footnote";
+	grid-gap:0px;
+}
+
+#gArticle{
+	display:grid;
+	grid:"header header header header header"
+	"showcase showcase showcase showcase showcase"
+	"info text text text text"
+	"footnote footnote footnote footnote footnote";
+	grid-gap:0px;
+}
+
+#rArticle{
+	display:grid;
+	grid:"header header header header header"
+	"showcase showcase showcase showcase showcase"
+	"text text text text text"
+	"footnote footnote footnote footnote footnote";
+	grid-gap:0px;
+}
+
+#contactSite{
+	display:grid;
+	grid:"header"
+	"main"
+	"footnote";
+	grid-gap:0px;
+}
+
+#header{
+	grid-area: header;
+}
+
+#main{
+	grid-area:main;
+}
+
+.navMenu {
+	display:flex;
+	justify-content:center;
+	background-color: #F5EDED;
+	border-style: none none solid none;
+	border-color: #000000;
+}
+
+.nav{
+	text-decoration: none;
+	color:#3E3636;
+	padding:5px;
+	width:25%;
+	padding-top: .5vh;
+	padding-bottom: .5vh;
+	justify-content:space-around;
+	background-color: #F5EDED;
+	text-align:center;
+	font-size: 20px;
+}
+
+.nav:hover{
+	background-color: #3E3636;
+	color: #F5EDED;
+}
+
+.starter{
+	position:relative;
+	height:27.78vw;
+	background-image: url("img/basic/starterBG.jpg");
+	background-size: cover;
+}
+
+.title{
+	width:50%;
+	position:absolute;
+	color:#FFFFFF;
+	text-align: left;
+	font-size: 70px;
+	padding-top: 70px;
+	bottom:0%;
+	left:11%;
+	font-family: 'Unica One', cursive;
+}
+
+#long{
+	font-size: 50px;
+}
+
+#rightInfo{
+	/*position: relative;*/
+	margin-left:10vw;
+	width:23vw;
+	grid-area:right;
+	display:grid;
+	grid:". profile ."
+	"title title title"
+	"main main main";
+	background-color: #3E3636;
+}
+
+#profilePicContainer{
+	padding-top: 2vh;
+	display:flex;
+	justify-content:center;
+	grid-area:profile;
+}
+
+#profilePic{
+	width: 100px;
+	height: 100px;
+}
+
+#profileTitle{
+	grid-area:title;
+	font-family: 'Unica One', cursive;
+	text-align: center;
+	font-size: 1.5rem;
+	margin-top: 5px;
+	margin-bottom:5px;
+}
+
+#profileText{
+	grid-area:main;
+	margin:0px;
+	padding:10px;
+	padding-left: 15px;
+	padding-bottom:3vh; 
+}
+
+#homeF{
+	margin-top: -20px;
+}
+
+.footnote{
+	margin:0px;
+	padding:0px;
+	grid-area:footnote;
+	font-size: 0.8rem;
+	background-color: #3E3636;
+	color: #F5EDED;
+}
+
+.footnote p{
+	padding-left: 15%;
+	padding-right: 15%;
+	padding-bottom: 1vh;
+	text-align: center;
+}
+
+#selectedWorkSection{
+	display:flex;
+	justify-content:center;
+}
+
+#selectedGrid{
+	display:grid;
+	grid-gap:0px;
+	grid:"title title"
+	"others photo"
+	"drawn game"
+	"title2 title2"
+	"review review";
+}
+
+.selectedShow{
+	width:27vw;
+	background-size: cover;
+	color:transparent;
+	text-decoration: none;
+}
+
+.selectedWorkTitle{
+	font-size: 2rem;
+	grid-area:title;
+	text-align: right;
+	background-color: #D72323;
+	font-family: 'Unica One', cursive;
+	margin-left:25vw;
+}
+
+.selectedWorkTitle2{
+	font-size: 2rem;
+	grid-area:title2;
+	text-align: right;
+	background-color: #D72323;
+	font-family: 'Unica One', cursive;
+	margin-left:25vw;
+}
+
+#drawing{
+	grid-area:drawn;
+	background-image: url("img/gallery/selectedWork/drawingShowSq.jpg");
+	height:27vw;
+}
+
+#drawing:hover{
+	background-image: url("img/gallery/selectedWork/redCover.jpg");
+}
+
+#others{
+	grid-area:others;
+	height:27vw;
+	background-image: url("img/gallery/selectedWork/installationShowSq.jpg");
+}
+
+#others:hover{
+	background-image: url("img/gallery/selectedWork/redCover.jpg");
+}
+
+#photo{
+	grid-area:photo;
+	height:27vw;
+	background-image: url("img/gallery/selectedWork/photoShow.jpg");
+}
+
+#photo:hover{
+	background-image: url("img/gallery/selectedWork/redCover.jpg");
+}
+
+#game{
+	grid-area:game;
+	height:27vw;
+	background-image: url("img/gallery/selectedWork/gameShow.jpg");
+}
+
+#game:hover{
+	background-image: url("img/gallery/selectedWork/redCover.jpg");
+}
+
+#review{
+	grid-area:review;
+	width:54vw;
+	height: 36vw;
+	background-image: url("img/gallery/selectedWork/latestReview.jpg");
+}
+
+#review:hover{
+	background-image: url("img/gallery/selectedWork/redCover.jpg");
+}
+
+.selectedShow:hover{
+	color:#FFFFFF;
+}
+
+.selectedTitle {
+	font-family: 'Unica One', cursive;
+	font-size: 1.5rem;
+	padding:20px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+#review .selectedTitle {
+	padding-top: 30%;
+	font-size: 3rem;
+}
+
+.selectedText {
+	padding:20px;
+	padding-top: 5px;
+	margin-top: 0px;
+}
+
+#updateContainer{
+	grid-area:update;
+	display:flex;
+	justify-content:center;
+	background-color: #F5EDED;
+	color:#3E3636;
+}
+
+#updateBox{
+	width: 84%;
+	padding: 50px;
+}
+
+#updateContainer h1{
+	position: relative;
+	padding-top: 30px;
+	font-family: 'Unica One', cursive;
+	font-size: 4rem;
+}
+
+.updateArticle{
+	padding-left: 3vw;
+	border-style: none none groove none;
+	display: grid;
+	grid:"title pic"
+	"date pic"
+	"abs pic";
+}
+
+.updateT{
+	width: 40vw;
+	text-decoration: none;
+	color: #000000;
+	padding-top: 3vh;
+	grid-area:title;
+	font-family: 'Unica One', cursive;
+	font-size: 2rem;
+}
+
+.updateArticle a:hover{
+	color: #D72323;
+}
+
+.updateAbstract{
+	width: 40vw;
+	grid-area:abs;
+}
+
+.updateDate{
+	width: 40vw;
+	color: #3E3636;
+	font-size: 1rem;
+}
+
+.thumbnail{
+	padding-top:10px;
+	padding-bottom:10px;
+	grid-area:pic;
+	width:40%;
+	justify-self:center;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+/*	position:relative;
+	right:0px;*/
+}
+
+.thumbnail img {
+	width:100%;
+}
+
+#firstUpdate{
+	border-style: groove none;
+}
+
+#showcaseContainer{
+	padding: 20px;
+	grid-area:showcase;
+	display:flex;
+	justify-content:center;
+	background-color: #F5EDED;
+	border-bottom: solid;
+	border-color: #000000;
+	border-width:1vh;
+}
+
+.showcaseBlock{
+	width: 100%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-direction:column;
+}
+
+.showcaseImg{
+	width: 50%;
+}
+
+.showcaseDes{
+	/*width: 40vw;*/
+	color: #3E3636;
+	font-size: 1rem;
+	text-align: center;
+}
+
+#workInfo{
+	font-family: 'Unica One', cursive;
+	width: 100%;
+	grid-area:info;
+	margin: 0px;
+	height:100%;
+	padding-right: 1vw;
+	padding-top: 3vh;
+	padding-left: 10vw;
+	color: #F5EDED;
+	font-size: 1.5rem;
+	text-align: right;
+	background-color: #D72323;
+	border-right: double;
+	/*border-top: groove;*/
+	line-height: 5vh;
+	border-color: #F5EDED;
+	border-width: 0.5vw;
+	display:flex;
+	flex-direction:column;
+	align-items: flex-end;
+}
+
+#textContainer{
+	grid-area:text;
+	color: #3E3636;
+	margin: 0px;
+	text-indent: 3vw;
+	padding: 15px;
+	padding-left:1.5vw;
+	border-left:solid;
+	border-color:#D72323;
+	border-width:1vw;
+	background-color: #F5EDED;
+}
+
+#rArticle #textContainer {
+	border:none;
+}
+
+.textPara{
+	padding-left: 8vw;
+	padding-right:8vw;
+}
+
+#big{
+	width:75%;
+}
+
+.pixel{
+	image-rendering:pixelated;
+}
+
+.transparent{
+	background-color: white;
+}
+
+.bigImg{
+	width:150%;
+}
+
+.biggerImg{
+	width:300%;
+}
+
+#workInfo a {
+	margin:5px;
+	width:15vw;
+	padding: 10px;
+	background-color: black;
+	color:white;
+	text-align: center;
+}
+
+#workInfo a:hover{
+	background-color: white;
+	color:black;
+}
+
+.reviewText{
+	padding-left: 20vw;
+	padding-right: 20vw;
+}
+
+#contactContainer{
+	display:flex;
+	flex-direction:column;
+	grid-area:main;
+	align-items:center;
+	justify-content:center;
+	background-color: black;
+}
+
+.contactBlock{
+	display:grid;
+	grid:"title title"
+	"text image";
+}
+
+.contactBlock h1{
+	padding-top:3vh;
+	padding-bottom:3vh;
+	text-align: center;
+	font-family: 'Unica One', cursive;
+	background-color: #D72323;
+	grid-area:title;
+}
+
+.contactTextContainer a {
+	font-size: 28px;
+	font-family: 'Unica One', cursive;
+	text-decoration: none;
+	position:relative;
+	margin:5vh;
+	padding: 20px;
+	right:0px;
+	background-color: #3E3636;
+	color:#D72323;
+	/*justify-self:right;*/
+}
+
+.contactTextContainer a:hover{
+	color: #3E3636;
+	background-color:#D72323;
+}
+
+.contactTextContainer {
+	grid-area:text;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+
+.contactTextContainer p {
+	width:80%;
+}
+
+.contactBlock img{
+	grid-area:image;
+	width:80%;
+}
+
+#bigPText{
+	grid-area:text;
+	padding-left: 15vw;
+	padding-right: 15vw;
+	background-color: #D72323;
+}
