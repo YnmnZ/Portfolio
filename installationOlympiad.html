@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="./style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
 	<title>"The Olympiad"</title>
 </head>
 <body>
@@ -24,7 +25,20 @@
 		<div id="showcaseContainer">
 
 			<div class="showcaseBlock">
-				<img src="img/gallery/installation.jpg" class="showcaseImg">
+				<a href="img/gallery/installation.jpg" data-fancybox="gallery" data-caption="The installation prototype">
+  <img src="img/gallery/installation.jpg" class="showcaseImg">
+</a>
+<div href="img/gallery/ad/ad1.png" data-fancybox="gallery" data-caption="Fake advertisement 1">
+</div>
+<div href="img/gallery/ad/ad2.png" data-fancybox="gallery" data-caption="Fake advertisement 2">
+</div>
+<div href="img/gallery/ad/ad3.png" data-fancybox="gallery" data-caption="Fake advertisement 3">
+</div>
+<div href="img/gallery/ad/ad4.png" data-fancybox="gallery" data-caption="Fake advertisement 4">
+</div>
+<div href="img/gallery/ad/ad5.png" data-fancybox="gallery" data-caption="Fake advertisement 5">
+</div>
+				
 			<p class="showcaseDes">Picture taken at the installation </p>
 			</div>
 			</div>
@@ -59,6 +73,11 @@
 
 		</div>
 
-	
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+	<script>
+	Fancybox.bind('[data-fancybox="gallery"]', {
+  // Your custom options
+});
+	</script>
 </body>
 </html>

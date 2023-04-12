@@ -603,7 +603,29 @@ html {
 	align-items:center;
 }
 
+.showcaseBlock a{
+	display:flex;
+	justify-content:center;
 }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media only screen and (min-width: 992px) {
@@ -1171,5 +1193,10 @@ html {
 	padding-right: 15vw;
 	background-color: #D72323;
 	font-size: 1rem;
+}
+
+.showcaseBlock a{
+	display:flex;
+	justify-content:center;
 }
 }
